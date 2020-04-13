@@ -19,7 +19,12 @@
       Value you entered {{ control.errors.minlength.actualLength }}, but it
       should be at least {{ control.errors.minlength.requiredLength }}
     </div>
+    <div class="help is-danger" *ngIf="control.errors.maxlength">
+      Value you entered {{ control.errors.maxlength.actualLength }}, but it
+      should be maximum length of {{ control.errors.maxlength.requiredLength }}
+    </div>
+    <div class="help is-danger" *ngIf="control.errors.pattern">
+      Invalid Format
+    </div>
   </ng-container>
-
-  <hr />
 </div>
